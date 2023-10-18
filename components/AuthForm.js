@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View, TextInput } from 'react-native'
 import React, { useState } from 'react'
 import Input from './Input'
+import Button from './Button'
 
 export default function AuthForm({ isLogin }) {
 
@@ -34,8 +35,21 @@ export default function AuthForm({ isLogin }) {
                 secure
                 onUpdateValue={() => { updateInput("password") }}
             />
+            <View style={styles.buttons} >
+                <Button>
+                    {
+                        isLogin ?
+                            "Login" :
+                            "Sign Up"
+                    }
+                </Button>
+            </View>
         </View>
     )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    buttons:{
+        marginTop:10
+    }
+})

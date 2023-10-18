@@ -3,9 +3,10 @@ import React from 'react'
 
 export default function Input({label,value,keyboardType,secure,onUpdateValue}) {
   return (
-    <View>
-      <Text>{label}</Text>
+    <View style={styles.inputContainer} >
+      <Text style={styles.labelContainer} >{label}</Text>
       <TextInput 
+        style={styles.input}
         value={value}
         autoCapitalize='none'
         keyboardType={keyboardType}
@@ -16,4 +17,22 @@ export default function Input({label,value,keyboardType,secure,onUpdateValue}) {
   )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    inputContainer:{
+        marginVertical:8
+    },
+    labelContainer:{
+        color:"white",
+        marginBottom:3,
+
+    },
+    input:{
+        backgroundColor:"pink",
+        paddingVertical:8,
+        paddingHorizontal:10,
+        borderRadius:20,
+        fontSize:16,
+
+
+    }
+})

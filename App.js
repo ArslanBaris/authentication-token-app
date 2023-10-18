@@ -18,8 +18,20 @@ const Stack = createNativeStackNavigator();
 
 function NormalStack() {
   return (
-    <Stack.Navigator>
-      <Stack.Screen name="Login" component={Login} />
+    <Stack.Navigator
+      screenOptions={{
+        headerStyle: {
+          backgroundColor: "blueviolet",
+        },
+        headerTintColor: "white",
+        contentStyle: {
+          backgroundColor: "white",
+        }
+      }}>
+      <Stack.Screen
+        name="Login"
+        component={Login}
+        options={{ headerTitle: "User Login"}} />
       <Stack.Screen name="SignUp" component={SignUp} />
     </Stack.Navigator>
   );
@@ -27,14 +39,14 @@ function NormalStack() {
 
 function App() {
   return (
-   <NavigationContainer>
-    <NormalStack />
-   </NavigationContainer>
+    <NavigationContainer>
+      <NormalStack />
+    </NavigationContainer>
   );
 }
 
 const styles = StyleSheet.create({
- 
+
 });
 
 export default App;
