@@ -21,7 +21,7 @@ export default function AuthContent({ isLogin }) {
             <View style={styles.button} >
                 <ButtonWhite onPress={switchScreen}>
                     {isLogin ?
-                        "New User" : "Sign In"}
+                        "Sign Up" : "Sign In"}
                 </ButtonWhite>
             </View>
         </View>

@@ -32,7 +32,7 @@ function NormalStack() {
         name="Login"
         component={Login}
         options={{ headerTitle: "User Login"}} />
-      <Stack.Screen name="SignUp" component={SignUp} />
+      <Stack.Screen name="SignUp" component={SignUp} options={{ headerTitle: "User Sign Up"}} />
     </Stack.Navigator>
   );
 }
